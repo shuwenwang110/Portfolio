@@ -1,0 +1,164 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shuwen Wang Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="white-spider.css" />
+  <script src="libraries/p5.min.js" defer></script>
+  <script src="space-effects.js" defer></script>
+  <script src="white-spider.js" defer></script>
+  <script src="protect-media.js" defer></script>
+</head>
+
+<body class="home-page">
+  <main class="page-shell home-shell">
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">2024to2026june</p>
+        <h1 class="home-title">Shuwen Wang Portfolio</h1>
+      </div>
+
+      <p class="home-note page-explain">
+        This front page works as a star map for the portfolio. Each box opens one project theme; unlinked boxes keep the place for later sections.
+      </p>
+    </header>
+
+    <nav class="theme-grid" aria-label="Portfolio themes">
+      <a class="theme-button" href="https://shuwenwang110.github.io/brand-design/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Brand Design</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/merchandise-design/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Merchandise Design</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/print-design/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Print Design</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/architecture-design/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Architecture Design</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/club-works/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Club Works</span>
+        </span>
+      </a>
+
+      <div class="theme-button stage-button" tabindex="0" aria-label="Stage themes">
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Stage</span>
+        </span>
+
+        <div class="stage-submenu" aria-label="Stage subthemes">
+          <a href="https://shuwenwang110.github.io/stage-a/" data-transition>Stage A</a>
+          <a href="https://shuwenwang110.github.io/stage-b/" data-transition>Stage B</a>
+        </div>
+      </div>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/photography/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Photography</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/creative-experiments/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Creative Experiments</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/drawing/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Drawing</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/component-a/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Component A</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/component-b/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">Component B</span>
+        </span>
+      </a>
+
+      <a class="theme-button" href="https://shuwenwang110.github.io/DAVID.EXE/" data-transition>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="box"></span>
+        <span class="theme-label">
+          <span class="theme-name">David</span>
+        </span>
+      </a>
+    </nav>
+
+    <footer class="home-footer">
+      <span>Selected works</span>
+      <span>Portfolio archive</span>
+    </footer>
+  </main>
+
+  <div class="fade-screen" aria-hidden="true"></div>
+
+  <script>
+    document.querySelectorAll("[data-transition]").forEach(link => {
+      link.addEventListener("click", event => {
+        event.preventDefault();
+        document.body.classList.add("is-leaving");
+
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 520);
+      });
+    });
+  </script>
+</body>
+</html>
